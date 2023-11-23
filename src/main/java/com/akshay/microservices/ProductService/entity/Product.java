@@ -1,15 +1,11 @@
 package com.akshay.microservices.ProductService.entity;
 
 
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
 
 @Entity
 @Data
@@ -19,7 +15,7 @@ import javax.persistence.Id;
 public class Product {
 
     @Id
-    @GeneratedValue(strategy = javax.persistence.GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long productId;
 
     @Column(name = "PRODUCT_NAME", nullable = false)
